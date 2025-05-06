@@ -12,7 +12,7 @@ struct Estudiante {
 };
 
 
-int agregarEstudiante(struct Estudiante estudiantes[], int *cantidad);
+void agregarEstudiante(struct Estudiante estudiantes[], int *cantidad);
 
 
 int main() {
@@ -43,7 +43,7 @@ int main() {
     return 0;
 }
 
-int agregarEstudiante(struct Estudiante estudiantes[], int *cantidad) {
+void agregarEstudiante(struct Estudiante estudiantes[], int *cantidad) {
     if (*cantidad >= MAX_ESTUDIANTES) {
         printf("No se pueden agregar mas estudiantes.\n");
         return 0;
@@ -59,5 +59,4 @@ int agregarEstudiante(struct Estudiante estudiantes[], int *cantidad) {
     scanf("%f", &estudiantes[*cantidad].notaFinal);
 
     (*cantidad)++;
-    return 1;
 }
